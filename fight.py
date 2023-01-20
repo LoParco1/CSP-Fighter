@@ -1,6 +1,5 @@
 from tkinter import *
 import turtle
-import keyboard
 import pickle
 import time
 import sys

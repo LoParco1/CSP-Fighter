@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
 
 def play() -> None:
-    """Setup the game."""
+    """Make the game."""
     window.destroy()
     os.system("python char1s.py")  # Should this be hardcoded?
     # ^^^a bit slower but works better

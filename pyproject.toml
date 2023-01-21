@@ -1,7 +1,13 @@
 [tool.poetry]
-authors = ["Your Name <you@example.com>"]
-description = ""
-name = "python-template"
+authors = [
+    "Rhys Harden <hardenr02@student.psdr3.org>",
+    "Victor LoParco <117766368+LoParco1@users.noreply.github.com>",
+]
+description = "Street Fighter + Chess + (Among) Us. Just the best stuff."
+name = "CSP Fighter"
+packages = [
+    { include = "src/csp-fighter" },
+]
 version = "0.1.0"
 
 [tool.poetry.dependencies]
@@ -20,6 +26,7 @@ toml = "^0.10.2"
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
 isort = "^5.11.4"
+pydocstyle = "^6.3.0"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"

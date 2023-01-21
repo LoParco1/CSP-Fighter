@@ -2,6 +2,7 @@ import os
 import pickle
 import sys
 import time
+from pathlib import Path
 from tkinter import *
 
 window = Tk()
@@ -11,7 +12,11 @@ c = Canvas(window, width=100, height=500)
 
 # COMMANDS FOR BUTTON
 def Return():
-    os.system("python3 char1s.py")
+    os.system("python3 char1s")
+
+
+p: Path = Path(os.path.realpath(__file__)).parent
+file: Path = Path.resolve(p / "char2.dat")
 
 
 def PLACEHOLDER():
@@ -22,10 +27,11 @@ def PLACEHOLDER():
         "50",  # HP x/100 (50 default)
         "50",
     ]  # speed x/100 (50 default)
-    # writes the list (^^^) to char1.txt for use later
-    pickle.dump(list, open("char2.txt", "wb"))
+    # writes the list (^^^) to char1.dat for use later
+    with file.open("wb") as char2:
+        pickle.dump(list, char2)
     window.destroy()
-    os.system("python Stage_select.py")
+    os.system("python3 stage_select")
 
 
 def NEVIL():
@@ -36,10 +42,11 @@ def NEVIL():
         "60",  # HP x/100 (50 default)
         "50",
     ]  # speed x/100 (50 default)
-    # writes the list (^^^) to char1.txt for use later
-    pickle.dump(list, open("char2.txt", "wb"))
+    # writes the list (^^^) to char1.dat for use later
+    with file.open("wb") as char2:
+        pickle.dump(list, char2)
     window.destroy()
-    os.system("python Stage_select.py")
+    os.system("python3 stage_select")
 
 
 def DONALD():
@@ -50,10 +57,11 @@ def DONALD():
         "70",  # HP x/100 (50 default)
         "30",
     ]  # speed x/100 (50 default)
-    # writes the list (^^^) to char1.txt for use later
-    pickle.dump(list, open("char2.txt", "wb"))
+    # writes the list (^^^) to char1.dat for use later
+    with file.open("wb") as char2:
+        pickle.dump(list, char2)
     window.destroy()
-    os.system("python3 Stage_select.py")
+    os.system("python3 stage_select")
 
 
 # END COMMANDS
@@ -71,7 +79,7 @@ c.create_text(40, 215, text="Tanks:", fill="black", font=("Helvetica 10 bold"))
 c.create_text(40, 285, text="Close:", fill="black", font=("Helvetica 10 bold"))
 
 # P1 CHARACTER SELECTED:
-p1 = pickle.load(open("char1.txt", "rb"))
+p1 = pickle.load(open("char1.dat", "rb"))
 
 # IMAGE BUTTONS:
 

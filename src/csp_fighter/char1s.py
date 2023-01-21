@@ -2,6 +2,7 @@ import os
 import pickle
 import sys
 import time
+from pathlib import Path
 from tkinter import *
 
 window = Tk()
@@ -12,7 +13,11 @@ c = Canvas(window, width=100, height=500)
 
 # COMMANDS FOR BUTTON
 def Return():
-    os.system("python3 main.py")
+    os.system("python3 main")
+
+
+p: Path = Path(os.path.realpath(__file__)).parent
+file: Path = Path.resolve(p / "char1.dat")
 
 
 def PLACEHOLDER():
@@ -23,10 +28,11 @@ def PLACEHOLDER():
         "50",  # HP x/100 (50 default)
         "50",
     ]  # speed x/100 (50 default)
-    # writes the list (^^^) to char1.txt for use later
-    pickle.dump(list, open("char1.txt", "wb"))
+    # writes the list (^^^) to char1.dat for use later
+    with file.open("wb") as char1:
+        pickle.dump(list, char1)
     window.destroy()
-    os.system("python3 char2s.py")
+    os.system("python3 char2s")
 
 
 def NEVIL():
@@ -37,10 +43,11 @@ def NEVIL():
         "60",  # HP x/100 (50 default)
         "50",
     ]  # speed x/100 (50 default)
-    # writes the list (^^^) to char1.txt for use later
-    pickle.dump(list, open("char1.txt", "wb"))
+    # writes the list (^^^) to char1.dat for use later
+    with file.open("wb") as char1:
+        pickle.dump(list, char1)
     window.destroy()
-    os.system("python3 char2s.py")
+    os.system("python3 char2s")
 
 
 def DONALD():
@@ -51,10 +58,11 @@ def DONALD():
         "70",  # HP x/100 (50 default)
         "30",
     ]  # speed x/100 (50 default)
-    # writes the list (^^^) to char1.txt for use later
-    pickle.dump(list, open("char1.txt", "wb"))
+    # writes the list (^^^) to char1.dat for use later
+    with file.open("wb") as char1:
+        pickle.dump(list, char1)
     window.destroy()
-    os.system("python3 char2s.py")
+    os.system("python3 char2s")
 
 
 # def anotherperson():
@@ -63,10 +71,10 @@ def DONALD():
 # 		"20", #def x/100 (50 default)
 # 		"40",	#HP x/100 (50 default)
 # 		"70"] #speed x/100 (50 default)
-# 	#writes the list (^^^) to char1.txt for use later
-# 	pickle.dump(list, open("char1.txt", "wb"))
+# 	#writes the list (^^^) to char1.dat for use later
+# 	pickle.dump(list, open("char1.dat", "wb"))
 # 	window.destroy()
-# 	os.system('python3 char2s.py')
+# 	os.system('python3 char2s')
 
 # END COMMANDS
 

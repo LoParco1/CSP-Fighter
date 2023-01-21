@@ -1,5 +1,5 @@
-src/**/char*.txt
-src/**/map.txt
+src/**/char*.dat
+src/**/map.dat
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

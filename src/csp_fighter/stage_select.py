@@ -10,21 +10,21 @@ window.geometry("500x500")
 
 # COMMANDS FOR BUTTON
 def OHIO():
-    pickle.dump("Ohio", open("map.txt", "wb"))
+    pickle.dump("Ohio", open("map.dat", "wb"))
     window.destroy()
-    os.system("python3 fight.py")
+    os.system("python3 fight")
 
 
 def SUN():
-    pickle.dump("Sun", open("map.txt", "wb"))
+    pickle.dump("Sun", open("map.dat", "wb"))
     window.destroy()
-    os.system("python3 fight.py")
+    os.system("python3 fight")
 
 
 def amog():
-    pickle.dump("moog", open("map.txt", "wb"))
+    pickle.dump("moog", open("map.dat", "wb"))
     window.destroy()
-    os.system("python3 fight.py")
+    os.system("python3 fight")
 
 
 # END COMMANDS

@@ -1,6 +1,8 @@
 { pkgs }: {
 	deps = [
-		pkgs.python311
+    pkgs.python310Full
+    pkgs.replitPackages.prybar-python310
+    pkgs.replitPackages.stderred
 	];
   env = {
     LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath ([
@@ -11,6 +13,7 @@
       pkgs.glib
     ] ++ (with pkgs.xlibs; [ libX11 libXext libXinerama libXcursor libXrandr libXi libXxf86vm ]));
 
-    PYTHONBIN = "${pkgs.python311}/bin/python3.11";
+    PYTHONBIN = "${pkgs.python310Full}/bin/python3.10";
+    LANG = "en_US.UTF-8";
   };
 }

@@ -1,0 +1,4 @@
+[[tool.poetry.source]]
+default = true
+name = "replit"
+url = "https://package-proxy.replit.com/pypi/simple/"

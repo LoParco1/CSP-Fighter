@@ -1,11 +1,12 @@
 {
   "recommendations": [
     "aaron-bond.better-comments",
-    "DavidAnson.vscode-markdownlint",
+    "davidanson.vscode-markdownlint",
     "ms-python.python",
     "ms-python.black-formatter",
     "ms-python.pylint",
     "ms-python.isort",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "bbenoist.nix"
   ]
 }

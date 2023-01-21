@@ -1,6 +1,6 @@
 { pkgs }: {
 	deps = [
-		pkgs.python38Full
+		pkgs.python311
 	];
   env = {
     LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath ([
@@ -11,6 +11,6 @@
       pkgs.glib
     ] ++ (with pkgs.xlibs; [ libX11 libXext libXinerama libXcursor libXrandr libXi libXxf86vm ]));
 
-    PYTHONBIN = "${pkgs.python38Full}/bin/python3.8";
+    PYTHONBIN = "${pkgs.python311}/bin/python3.11";
   };
 }

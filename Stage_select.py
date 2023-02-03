@@ -10,20 +10,29 @@ window.geometry("500x500")
 
 #COMMANDS FOR BUTTON
 def OHIO():
-	pickle.dump("Ohio", open("map.txt", "wb"))
+	pickle.dump("Ohio", open("txt/map.txt", "wb"))
 	window.destroy()
-	os.system('python3 fight.py')
+	os.system('python fight2.py')
 	
 def SUN():
-	pickle.dump("Sun", open("map.txt", "wb"))
+	pickle.dump("Sun", open("txt/map.txt", "wb"))
 	window.destroy()
-	os.system('python3 fight.py')
+	os.system('python fight2.py')
 	
 def amog():
-	pickle.dump("moog", open("map.txt", "wb"))
+	pickle.dump("moog", open("txt/map.txt", "wb"))
 	window.destroy()
-	os.system('python3 fight.py')
-	
+	os.system('python fight2.py')
+
+def GAVDOG():
+	pickle.dump("Gavdog", open("txt/map.txt", "wb"))
+	window.destroy()
+	os.system('python fight2.py')
+
+def LEMON():
+	pickle.dump("Lemon", open("txt/map.txt", "wb"))
+	window.destroy()
+	os.system('python fight2.py')
 #END COMMANDS
 
 	
@@ -35,8 +44,8 @@ button= Button(window, image=click_btn,command= OHIO,height= 100, width=100)
 button.place(x=100, y=100)
 
 #Gavin Map
-click_btn2= PhotoImage(file='pics/icons/Gavin.png')
-button2= Button(window, image=click_btn2,command= OHIO,height= 100, width=100)
+click_btn2= PhotoImage(file='pics/icons/Gavdog.png')
+button2= Button(window, image=click_btn2,command= GAVDOG,height= 100, width=100)
 button2.place(x=200,y=100)
 
 #Sun Map
@@ -46,7 +55,7 @@ button3.place(x=300,y=100)
 
 #Lemon Map
 click_btn4= PhotoImage(file='pics/icons/Lemon.png')
-button4= Button(window, image=click_btn4,command= OHIO,height= 100, width=100)
+button4= Button(window, image=click_btn4,command= LEMON,height= 100, width=100)
 button4.place(x=150,y=200)
 
 #amogus Map
